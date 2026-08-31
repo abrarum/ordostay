@@ -27,7 +27,7 @@ export default function DemoAccessGate({ children }: { children: ReactNode }) {
     event.preventDefault();
 
     if (email.trim().toLowerCase() !== DEMO_ACCESS_EMAIL || password !== DEMO_ACCESS_PASSWORD) {
-      setError('Those credentials do not match the demo access details below.');
+      setError('Those credentials do not match.');
       return;
     }
 
@@ -43,7 +43,7 @@ export default function DemoAccessGate({ children }: { children: ReactNode }) {
 
         <div className="relative">
           <p className="text-2xl font-semibold tracking-wide">OrdoStay</p>
-          <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">Operating Intelligence</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55"></p>
         </div>
 
         <div className="relative max-w-xl">
@@ -64,21 +64,17 @@ export default function DemoAccessGate({ children }: { children: ReactNode }) {
           </div>
         </div>
 
-        <p className="relative text-xs text-white/35">Private demonstration environment</p>
+        <p className="relative text-xs text-white/35">Private environment</p>
       </section>
 
       <section className="flex min-h-screen items-center justify-center px-5 py-10 sm:px-10">
         <div className="w-full max-w-md">
           <div className="mb-10 lg:hidden">
             <p className="text-2xl font-semibold tracking-wide">OrdoStay</p>
-            <p className="mt-1 text-xs uppercase tracking-[0.22em] text-telivity-slate">Operating Intelligence</p>
           </div>
 
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-telivity-dark-teal">Secure access</p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight">Welcome to OrdoStay</h2>
-          <p className="mt-3 text-sm leading-6 text-telivity-slate">
-            Sign in to explore the hotel operating-intelligence demonstration.
-          </p>
 
           <form className="mt-8 space-y-5" onSubmit={handleSubmit} noValidate>
             <div>
@@ -133,27 +129,12 @@ export default function DemoAccessGate({ children }: { children: ReactNode }) {
               type="submit"
               className="flex w-full items-center justify-center gap-2 bg-telivity-navy px-4 py-3 text-sm font-semibold text-white transition hover:bg-telivity-dark-teal focus:outline-none focus:ring-2 focus:ring-telivity-teal focus:ring-offset-2"
             >
-              Enter demonstration
+              Login
               <ArrowRight size={17} />
             </button>
           </form>
 
-          <aside className="mt-7 border border-telivity-teal/25 bg-white px-4 py-4" aria-label="Demo credentials">
-            <div className="flex items-center gap-2 text-sm font-semibold">
-              <ShieldCheck size={17} className="text-telivity-dark-teal" />
-              Demo access
-            </div>
-            <dl className="mt-3 grid grid-cols-[72px_1fr] gap-y-2 text-xs">
-              <dt className="text-telivity-slate">Email</dt>
-              <dd className="font-mono font-medium text-telivity-navy">{DEMO_ACCESS_EMAIL}</dd>
-              <dt className="text-telivity-slate">Password</dt>
-              <dd className="font-mono font-medium text-telivity-navy">{DEMO_ACCESS_PASSWORD}</dd>
-            </dl>
-          </aside>
-
-          <p className="mt-5 text-xs leading-5 text-telivity-slate">
-            Demonstration access only. Production deployments use identity-based authentication and role permissions.
-          </p>
+         
         </div>
       </section>
     </main>

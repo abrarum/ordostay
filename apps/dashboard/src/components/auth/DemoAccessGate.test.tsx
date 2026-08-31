@@ -28,7 +28,7 @@ describe('DemoAccessGate', () => {
 
     await user.type(screen.getByLabelText('Email address'), 'wrong@example.com');
     await user.type(screen.getByLabelText('Password'), 'incorrect');
-    await user.click(screen.getByRole('button', { name: 'Enter demonstration' }));
+    await user.click(screen.getByRole('button', { name: 'Enter name' }));
 
     expect(screen.getByRole('alert')).toHaveTextContent('do not match');
     expect(sessionStorage.getItem(DEMO_ACCESS_SESSION_KEY)).toBeNull();
@@ -40,7 +40,7 @@ describe('DemoAccessGate', () => {
 
     await user.type(screen.getByLabelText('Email address'), DEMO_ACCESS_EMAIL);
     await user.type(screen.getByLabelText('Password'), DEMO_ACCESS_PASSWORD);
-    await user.click(screen.getByRole('button', { name: 'Enter demonstration' }));
+    await user.click(screen.getByRole('button', { name: 'Enter name' }));
 
     expect(screen.getByText('Private dashboard')).toBeInTheDocument();
     expect(sessionStorage.getItem(DEMO_ACCESS_SESSION_KEY)).toBe('granted');
