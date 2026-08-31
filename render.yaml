@@ -1,4 +1,4 @@
-# HAIP — Render Blueprint (one-click cloud demo)
+# OrdoStay - Render Blueprint
 #
 # ⚠️  DEMO ONLY — NOT A SECURE PRODUCTION TEMPLATE. ⚠️
 # This blueprint runs with AUTH_ENABLED=false + HAIP_ALLOW_INSECURE=true + mock
@@ -10,7 +10,7 @@
 # CONNECT_API_KEY. (The API refuses to boot production-like with auth off UNLESS
 # HAIP_ALLOW_INSECURE=true — so removing that line is the intended hardening step.)
 #
-# Deploy a fully-working HAIP demo (API + dashboard + AI agents, seeded) with no
+# Deploy a fully-working OrdoStay demo (API + dashboard + AI agents, seeded) with no
 # local setup. Render provisions Postgres + Redis, builds the Docker image, runs
 # migrate+seed via preDeployCommand, then serves the app.
 #
@@ -22,7 +22,7 @@
 
 services:
   - type: web
-    name: haip-demo
+    name: ordostay
     runtime: docker
     dockerfilePath: ./apps/api/Dockerfile
     dockerContext: .

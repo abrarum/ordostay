@@ -129,7 +129,7 @@ export default function HelpPanel({ open, onClose }: HelpPanelProps) {
                     className="flex items-center gap-2 text-sm font-medium text-telivity-teal hover:underline"
                   >
                     <Sparkles size={14} />
-                    Explain with HAIP AI
+                    Explain with Ordo AI
                   </button>
                   {explainOpen && (
                     <div className="mt-3 bg-telivity-light-grey/60 rounded-lg p-3 text-sm text-telivity-slate">

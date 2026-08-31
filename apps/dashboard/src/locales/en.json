@@ -1233,7 +1233,7 @@
     "reviews": "Reviews",
     "rooms": "Rooms",
     "settings": "Settings",
-    "tagline": "Hotel AI Platform",
+    "tagline": "Hotel Operating Intelligence",
     "tax": "Tax Settings",
     "usersRoles": "Users & Roles"
   },
@@ -1625,7 +1625,7 @@
       "overbooking": "Overbooking",
       "revenueManager": "Revenue Manager"
     },
-    "aiAnalyzing": "HAIP AI is analyzing…",
+    "aiAnalyzing": "Ordo AI is analyzing…",
     "aiRecommendations": "AI Recommendations",
     "all": "All",
     "approvalRate": "Approval Rate",

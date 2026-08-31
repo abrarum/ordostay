@@ -168,7 +168,7 @@ function RevenueDashboard({ agents }: { agents: AgentStatus[] }) {
 }
 
 // ---------------------------------------------------------------------------
-// HAIP AI — grounded explanation for a single decision (lazy, on expand)
+// Ordo AI - grounded explanation for a single decision (lazy, on expand)
 // ---------------------------------------------------------------------------
 
 function HaipAiExplanation({ propertyId, decisionId }: { propertyId: string; decisionId: string }) {
@@ -196,7 +196,7 @@ function HaipAiExplanation({ propertyId, decisionId }: { propertyId: string; dec
   return (
     <div className="mb-3 rounded-lg border border-telivity-teal/30 bg-telivity-teal/5 p-3">
       <div className="mb-1 flex items-center gap-1 text-xs font-semibold text-telivity-teal">
-        <Brain size={13} /> HAIP AI
+        <Brain size={13} /> Ordo AI
       </div>
       <p className="text-sm text-telivity-navy">{explanation.rationale}</p>
       {explanation.suggestions?.length > 0 && (

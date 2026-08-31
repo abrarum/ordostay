@@ -73,10 +73,10 @@ describe('Sidebar', () => {
     );
   });
 
-  it('shows HAIP branding', () => {
+  it('shows OrdoStay branding', () => {
     renderWithProviders(<Sidebar mobileOpen={false} onClose={() => {}} />);
-    expect(screen.getByText('HAIP')).toBeInTheDocument();
-    expect(screen.getByText('Hotel AI Platform')).toBeInTheDocument();
+    expect(screen.getByText('OrdoStay')).toBeInTheDocument();
+    expect(screen.getByText('Operating Intelligence')).toBeInTheDocument();
   });
 
   it('has hidden sidebar by default on mobile (translate-x-full)', () => {

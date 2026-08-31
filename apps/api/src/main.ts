@@ -59,10 +59,9 @@ async function bootstrap() {
 
   // OpenAPI / Swagger
   const config = new DocumentBuilder()
-    .setTitle('HAIP — Hotel AI Platform')
+    .setTitle('OrdoStay - Hotel Operating Intelligence')
     .setDescription(
-      'Open-source, API-first hotel Property Management System. ' +
-      'Part of Telivity\'s open-source travel infrastructure.',
+      'Hotel operating intelligence for performance, exceptions, and next actions.',
     )
     .setVersion('0.0.1')
     .addBearerAuth()
