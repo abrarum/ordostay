@@ -210,11 +210,11 @@ async function main() {
   );
 
   const userDefs: { name: string; email: string; roleKey: string }[] = [
-    { name: 'Demo Admin', email: 'admin@telivitygrand.com', roleKey: 'admin' },
-    { name: 'Anna Schmidt', email: 'anna@telivitygrand.com', roleKey: 'front_desk' },
-    { name: 'Lena Novak', email: 'lena@telivitygrand.com', roleKey: 'housekeeping' },
-    { name: 'Marco Rossi', email: 'marco@telivitygrand.com', roleKey: 'housekeeping_manager' },
-    { name: 'Nadia Haddad', email: 'nadia@telivitygrand.com', roleKey: 'night_auditor' },
+    { name: 'Demo Admin', email: 'admin@ordostay.onrender.com', roleKey: 'admin' },
+    { name: 'Anna Schmidt', email: 'anna@ordostay.onrender.com', roleKey: 'front_desk' },
+    { name: 'Lena Novak', email: 'lena@ordostay.onrender.com', roleKey: 'housekeeping' },
+    { name: 'Marco Rossi', email: 'marco@ordostay.onrender.com', roleKey: 'housekeeping_manager' },
+    { name: 'Nadia Haddad', email: 'nadia@ordostay.onrender.com', roleKey: 'night_auditor' },
   ];
   const userIds = userDefs.map((_, i) => sid('ef000001', i + 1));
   await db.insert(schema.users).values(
