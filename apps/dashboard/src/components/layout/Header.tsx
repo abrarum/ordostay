@@ -11,6 +11,7 @@ import { SUPPORTED_LANGUAGES } from '../../i18n';
 import CommandPalette, { useCommandPaletteShortcut } from '../search/CommandPalette';
 import NotificationBell from '../notifications/NotificationBell';
 import HelpPanel from '../help/HelpPanel';
+import { clearDemoAccess } from '../../lib/demo-access';
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -39,6 +40,11 @@ export default function Header({ onMenuClick }: HeaderProps) {
   const propertyLabel = isPortfolioMode
     ? t('header.allProperties', { defaultValue: 'All Properties' })
     : (activeProperty?.name ?? t('header.selectProperty'));
+
+  const leaveDemo = () => {
+    clearDemoAccess();
+    window.location.assign('/');
+  };
 
   return (
     <>
@@ -186,6 +192,18 @@ export default function Header({ onMenuClick }: HeaderProps) {
                 <LogOut size={16} className="text-telivity-mid-grey hover:text-red-600" />
               </button>
             </div>
+          )}
+
+          {!authEnabled && (
+            <button
+              onClick={leaveDemo}
+              className="flex items-center gap-1.5 border-l border-gray-200 pl-3 text-xs font-medium text-telivity-slate transition hover:text-telivity-navy sm:pl-4"
+              aria-label="Log out of demonstration"
+              title="Log out of demonstration"
+            >
+              <LogOut size={15} />
+              <span className="hidden md:inline">Log out</span>
+            </button>
           )}
         </div>
       </header>

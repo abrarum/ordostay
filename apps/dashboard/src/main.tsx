@@ -6,6 +6,7 @@ import { queryClient } from './lib/queryClient';
 import { AuthProvider } from './context/AuthContext';
 import { PropertyProvider } from './context/PropertyContext';
 import { ToastProvider } from './components/ui/Toast';
+import DemoAccessGate from './components/auth/DemoAccessGate';
 import App from './App';
 import './i18n';
 import './index.css';
@@ -16,9 +17,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <QueryClientProvider client={queryClient}>
         <ToastProvider>
           <AuthProvider>
-            <PropertyProvider>
-              <App />
-            </PropertyProvider>
+            <DemoAccessGate>
+              <PropertyProvider>
+                <App />
+              </PropertyProvider>
+            </DemoAccessGate>
           </AuthProvider>
         </ToastProvider>
       </QueryClientProvider>
